@@ -1,0 +1,187 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{chatfield2019analysis}{book}{}
+    \name{author}{2}{}{%
+      {{hash=CC}{%
+         family={Chatfield},
+         familyi={C\bibinitperiod},
+         given={C.},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=XH}{%
+         family={Xing},
+         familyi={X\bibinitperiod},
+         given={H.},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {CRC Press, Taylor \& Francis Group}%
+    }
+    \strng{namehash}{CCXH1}
+    \strng{fullhash}{CCXH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{9781138066137}
+    \field{series}{Chapman and Hall/CRC Texts in Statistical Science Series}
+    \field{title}{The Analysis of Time Series: An Introduction with R}
+    \verb{url}
+    \verb https://books.google.co.jp/books?id=9tPOwQEACAAJ
+    \endverb
+    \field{year}{2019}
+  \endentry
+
+  \entry{chandola2009anomaly}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CV}{%
+         family={Chandola},
+         familyi={C\bibinitperiod},
+         given={Varun},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Banerjee},
+         familyi={B\bibinitperiod},
+         given={Arindam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KV}{%
+         family={Kumar},
+         familyi={K\bibinitperiod},
+         given={Vipin},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Association for Computing Machinery}%
+    }
+    \keyw{Anomaly detection, outlier detection}
+    \strng{namehash}{CV+1}
+    \strng{fullhash}{CVBAKV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1145/1541880.1541882
+    \endverb
+    \field{issn}{0360-0300}
+    \field{number}{3}
+    \field{title}{Anomaly Detection: A Survey}
+    \verb{url}
+    \verb https://doi.org/10.1145/1541880.1541882
+    \endverb
+    \field{volume}{41}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{journaltitle}{ACM Comput. Surv.}
+    \field{year}{2009}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{fernando2021deep}{misc}{}
+    \name{author}{5}{}{%
+      {{hash=FT}{%
+         family={Fernando},
+         familyi={F\bibinitperiod},
+         given={Tharindu},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GH}{%
+         family={Gammulle},
+         familyi={G\bibinitperiod},
+         given={Harshala},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Denman},
+         familyi={D\bibinitperiod},
+         given={Simon},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Sridharan},
+         familyi={S\bibinitperiod},
+         given={Sridha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Fookes},
+         familyi={F\bibinitperiod},
+         given={Clinton},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FT+1}
+    \strng{fullhash}{FTGHDSSSFC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{eprint}
+    \verb 2012.02364
+    \endverb
+    \field{title}{Deep Learning for Medical Anomaly Detection -- A Survey}
+    \field{eprinttype}{arXiv}
+    \field{eprintclass}{cs.LG}
+    \field{year}{2021}
+  \endentry
+
+  \entry{taboada2009images}{incollection}{}
+    \name{author}{4}{}{%
+      {{hash=TCA}{%
+         family={Taboada-Crispi},
+         familyi={T\bibinithyphendelim C\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Sahli},
+         familyi={S\bibinitperiod},
+         given={Hichem},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HPD}{%
+         family={Hernandez-Pacheco},
+         familyi={H\bibinithyphendelim P\bibinitperiod},
+         given={Denis},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=FRA}{%
+         family={Falcon-Ruiz},
+         familyi={F\bibinithyphendelim R\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IGI Global}%
+    }
+    \strng{namehash}{TCA+1}
+    \strng{fullhash}{TCASHHPDFRA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Various approaches have been taken to detect anomalies, with certain particularities in the medical image scenario, linked to other terms: content-based image retrieval, pattern recognition, classification, segmentation, outlier detection, image mining, as well as computer-assisted diagnosis, and computeraided surgery. This chapter presents, a review of anomaly detection (AD) techniques and assessment methodologies, which have been applied to medical images, emphasizing their peculiarities, limitations and future perspectives. Moreover, a contribution to the field of AD in brain computed tomography images is also given, illustrated and assessed.%
+    }
+    \field{booktitle}{Handbook of Research on Advanced Techniques in Diagnostic Imaging and Biomedical Applications}
+    \field{pages}{426\bibrangedash 446}
+    \field{title}{Anomaly detection in medical image analysis}
+    \field{year}{2009}
+  \endentry
+\enddatalist
+\endinput

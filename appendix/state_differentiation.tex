@@ -1,0 +1,12 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\usepackage{subfiles}
+
+\begin{document}
+    \section{Prova de que estados não-ortogonais não podem ser diferenciados de forma confiável}
+    \label{appendix:meas_proof}
+    Para demonstrar que dois estados não-ortogonais $|\psi_1\rangle$ e $|\psi_2\rangle$ não podem ser distinguidos de forma confiável, usaremos prova por contradição. Vamos assumir que é existe uma medição capaz de diferenciar entre os dois estados, ou seja, que dado o estado preparado como $|\psi_1\rangle$ ($\psi_2$) a probabilidade de medir f(j)=1 (f(j)=2) é 1. Definindo $E_i = \sum_{j: f(j)=1}M_j^\daggerM_j$, as medições podem ser escritas como:
+    $$\langle \psi_1|E_1|\psi_1\rangle=1 ;e; \langle \psi_2|E_2|\psi_2\rangle=1$$
+    Como $\sum E_i = I$, temos que $\sum \langle\psi_1|E_i|\psi_1\rangle = 1$, o que obriga que $\langle \psi_1|E_2|\psi_1\rangle=0$. Decompondo $|\psi_2\rangle = \alpha|\psi_1\rangle + \beta|\phi\rangle$, com $|\phi\rangle$ ortogonal a $|\psi_1\rangle$, $|\alpha|^2+|\beta|^2 = 1$, e como $|\psi_1\rangle$ e $|\psi_2\rangle$ não são ortogonais, $|\beta| < 1$. Isso faz com que $\langle \psi_2|E_2|\psi_2\rangle = |\beta|^2\phi|E_2|\phi\rangle \leq |\beta|^2 \leq 1$, o que contradiz nossa hipótese inicial. CQD
+\end{document}
+

@@ -1,0 +1,111 @@
+\documentclass[12pt,onecolumm,a4paper]{article}
+\usepackage{xeCJK}
+%\setCJKmainfont{IPAMincho}
+%\setCJKsansfont{IPAGothic}
+%\setCJKmonofont{IPAGothic}
+\usepackage{datetime}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{blindtext}
+\graphicspath{ {./images/} }
+\usepackage{imakeidx}
+\usepackage{subfiles}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[
+backend=bibtex,
+style=nature,
+sorting=none
+]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{dsfont}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+\usepackage{indentfirst}
+\usepackage[a4paper,margin=1in,headheight=.4in,headsep=12pt,heightrounded]{geometry}
+\usepackage[font=footnotesize]{caption}
+\usepackage[normalem]{ulem}
+\usepackage{fancyhdr}
+\usepackage{physics}
+\usepackage{placeins}
+\usepackage{afterpage}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\pagenumbering{arabic}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\rightmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+    \subfile{sections/Cover/cover}
+    
+    \tableofcontents
+    \newpage
+
+    \subfile{sections/Abstract/abstract}
+    \newpage
+    
+    \subfile{sections/Introduction/Chapter}
+    \subfile{sections/Project_Outline/Chapter}
+    \subfile{sections/Forecasting/Chapter}
+    \subfile{sections/Anomaly_Detection/Chapter}
+    \subfile{sections/Data_Augmentation/Chapter}
+    \subfile{sections/Methods/Chapter}
+    \subfile{sections/Discussion/Chapter}
+    \subfile{sections/Conclusion/Chapter}
+    
+    \clearpage
+    
+    \setstretch{1}
+    \printbibliography
+    \appendix
+
+\end{document}
