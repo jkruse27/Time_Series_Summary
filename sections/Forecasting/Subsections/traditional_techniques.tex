@@ -4,6 +4,14 @@
 \usepackage{subfig}
 
 \begin{document}
-    \subsection{Traditional Approaches}
+    \subsection{Moving Averages and Autoregressive Models}
+        In this section, we delve further into the modeling of stochastic processes, particularly through Moving Averages (MA), Autoregressive (AR) models, and their combinations. To make an informed choice among these options, it is crucial to comprehend the correlogram of our variable. Hence, we will now explore the concept of correlograms.\par
 
+        Initially, let's consider a scenario where our time series observations, denoted as $x_1$, $x_2$, ..., $x_N$, are independent and identically distributed random variables. In this case, it can be demonstrated that the expected value for the estimator $r_k$ (representing the autocorrelation coefficient $\rho(k)$) is approximately $-\frac{1}{N}$, while the variance of $r_k$ is approximately $\frac{1}{N}$.\par
+        
+        This statistical insight allows us to assess the randomness of a time series by employing the 95\% confidence interval of the correlogram coefficients, which can be calculated as $\pm \frac{1.96}{\sqrt{N}}$. Consequently, coefficients falling within this interval suggest a purely random process, while those outside the interval are deemed significant. However, it is important to note that depending on the size of $N$, approximately 5\% of the coefficients may fall outside the interval even in a random process.\par
+        
+        By understanding and analyzing the correlogram coefficients, we gain valuable insights into the presence of autocorrelation and the degree of randomness exhibited by the time series. This knowledge aids in selecting appropriate modeling approaches and making meaningful interpretations of the data.\par
+
+        In addition, the correlogram of a time series provides valuable insights into its stationarity and underlying process. When the correlogram coefficients do not decay quickly, it indicates that the series is non-stationary and requires differencing to achieve stationarity. On the other hand, if the correlogram exhibits a sudden cut-off at a specific lag, it suggests a MA(q) process. In contrast, an AR process is characterized by a combination of sinusoids and a damped exponential pattern in the correlogram. Mixed Autoregressive Moving Averages (ARMA) models follow a similar pattern as AR models, having a tendency to display a damped decay and sinusoidal behavior instead of a distinct cut-off. By analyzing the correlogram, we can identify the nature of the underlying process and select an appropriate modeling approach accordingly.\par
 \end{document}
