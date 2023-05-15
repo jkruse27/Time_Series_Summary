@@ -14,4 +14,33 @@
         By understanding and analyzing the correlogram coefficients, we gain valuable insights into the presence of autocorrelation and the degree of randomness exhibited by the time series. This knowledge aids in selecting appropriate modeling approaches and making meaningful interpretations of the data.\par
 
         In addition, the correlogram of a time series provides valuable insights into its stationarity and underlying process. When the correlogram coefficients do not decay quickly, it indicates that the series is non-stationary and requires differencing to achieve stationarity. On the other hand, if the correlogram exhibits a sudden cut-off at a specific lag, it suggests a MA(q) process. In contrast, an AR process is characterized by a combination of sinusoids and a damped exponential pattern in the correlogram. Mixed Autoregressive Moving Averages (ARMA) models follow a similar pattern as AR models, having a tendency to display a damped decay and sinusoidal behavior instead of a distinct cut-off. By analyzing the correlogram, we can identify the nature of the underlying process and select an appropriate modeling approach accordingly.\par
+
+        When using a AR(p) model, the fitting of the data can be done as a simple regression model to find the coefficients \{$\hat{\alpha}_1$, ..., $\hat{\alpha}_p$\} that best fit equation \ref{eq:lin_reg}. To determine the order of such process, looking at the ac.f. might not be so insightful as in the MA case. Because of that, we can use what is called the \textbf{partial autocorrelation function}, that measures the excess correlation at lag $p$ that is not accounted for in lag $p-1$. In the partial autocorrelation function, the properties of the MA and AR are inverted when compared to the normal ac.f., meaning that now the AR process will have a cut-off at lag p, while the MA one will tend to attenuate slowly.
+        
+        \begin{equation}
+            \label{eq:lin_reg}
+            (X_t-\bar{x}) = \hat{\alpha}_1(X_{t-1}-\bar{x}) + ... + \hat{\alpha}_p(X_{t-p}-\bar{x})
+        \end{equation}
+
+        Fitting a MA process is a little harder because efficient explicit estimators cannot be found. Assuming a process of the from
+
+        \begin{equation}
+            \label{eq:ma}
+            X_t = \mu + Z_t + \beta_1Z_{t-1} + ... + + \beta_qZ_{t-q}
+        \end{equation}
+
+        we would start with an initial guess for the values of $\mu$, $\beta_1$, ..., $\beta_q$ and then iteratively improve upon it by means of optimization procedures that minimize the residual sum of squares. Feating ARMA and ARIMA models follow similar paths, typically involving iteratively optimizing the residue. Because of this added complexity for fitting MA models when compared to AR, many times AR ones are prefered, even at the expense of more parameters.\par
+
+        Applying this concepts to our study case, we can see in figure \ref{fig:acf} the autocorrelation and partial autocorrelation functions for our Heart Rate data. As we can see, the autocorrelation shows a very slow decay, meaning that the series is most likely not stationary and should be differentiated. Doing that, we get the plots on the right, that show a different picture. With that, we can see that mostly only one lag is relevant both for the AR and the MA (the other values that lie outside the 95\% confidence interval in farther lags are probably only due to chance, as was mentioned before that approximately 5\% of the coefficients would lie outside the bounds even in completely random series). With these informations, we know that a ARIMA model should be considered (as the data is not stationary) taking into account only a single lag. \par 
+
+        \begin{figure}[h]
+            \begin{center}
+            \centering
+            \includegraphics[width={\columnwidth}]{images/acf.png}
+            \caption{Plot of the autocorrelation and partial autocorrelation for the raw and differentiated HR time series data. The dashed lines mark the 95\% confidence interval for the coefficients.}
+            \label{fig:acf}
+            \end{center}
+        \end{figure}
+
+    
 \end{document}
