@@ -42,5 +42,18 @@
             \end{center}
         \end{figure}
 
+        With this information, we can fit an ARIMA model using 1 lag for the MA and one lag for the AR. We can see from Figura \ref{fig:arima} that the model tends to fit pretty well to the data, although it tended not to follow the data on the peaks.
+        
+        \begin{figure}[h]
+            \begin{center}
+            \centering
+            \includegraphics[width={\columnwidth}]{images/ARIMA.png}
+            \caption{ARIMA model forecast compared to original time series data for the HR of the Lawson dataset using a period not used during the parameter estimation.}
+            \label{fig:arima}
+            \end{center}
+        \end{figure}
+
+
+
     
 \end{document}
