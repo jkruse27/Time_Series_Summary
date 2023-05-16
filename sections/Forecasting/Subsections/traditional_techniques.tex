@@ -42,7 +42,7 @@
             \end{center}
         \end{figure}
 
-        With this information, we can fit an ARIMA model using 1 lag for the MA and one lag for the AR. We can see from Figura \ref{fig:arima} that the model tends to fit pretty well to the data, although it tended not to follow the data on the peaks.
+        With this information, we can fit an ARIMA model using 1 lag for the MA and one lag for the AR. We can see from Figure \ref{fig:arima} that the model tends to fit pretty well to the data, although it tended not to follow the data on the peaks. Considering the non normalized data, it achieved an MSE of $71.3$.
         
         \begin{figure}[h]
             \begin{center}
@@ -53,7 +53,16 @@
             \end{center}
         \end{figure}
 
+        From the ac.f. and pac.f. of the residuals of the ARIMA model (the difference between the original series and the predicted one) shown in Figure \ref{fig:res_arima}, it is possible to see that no correlation appears to be left, meaning the model fitted was with the right specifications (remember that even for a completely random series some coefficients are expected to be above the threshold by pure chance).
 
+        \begin{figure}[h]
+            \begin{center}
+            \centering
+            \includegraphics[width={\columnwidth}]{images/res_ARIMA.png}
+            \caption{Autocorrelation and Partial Autocorrelation for the residuals from the ARIMA model.}
+            \label{fig:res_arima}
+            \end{center}
+        \end{figure}
 
-    
+    \subsection{Multivariate Forecasting}
 \end{document}
