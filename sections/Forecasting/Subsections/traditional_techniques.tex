@@ -65,4 +65,25 @@
         \end{figure}
 
     \subsection{Multivariate Forecasting}
+        For now, we have only been considering infering the future values of the series based on the previous measured ones, but what if we have access to other features as well? Take for instance the case of the Lawson data, where there are measurements of activity and temperature, as well as the heart rate. By looking more into the data, we can see for example that the activity is strongly correlated to the heart rate, specially when considering their averages over a time period. Figure \ref{fig:corr} shows this relation between the variables. Another relation that can be observed from the data is regarding the temperature, where higher temperatures tend, on average, to result in lower heart rates. This can be seen in Figure \ref{fig:temp}. By considering this external variables to the series that are still clearly related to the future values of it, it is reasonable to assume that by including them in our forecasting model, the results would be better. \par
+
+        \begin{figure}[h]
+            \begin{center}
+            \centering
+            \includegraphics[width={\columnwidth}]{images/activity_hr_correlation.png}
+            \caption{Plot of the heart rate as a function of the activity value for different averaging times. It is clear that both variables are highly correlated, and that the higher the averaging window the more linearly correlated this relationship becomes.}
+            \label{fig:corr}
+            \end{center}
+        \end{figure}
+
+        \begin{figure}[h]
+            \begin{center}
+            \centering
+            \includegraphics[width={\columnwidth}]{images/temperature.png}
+            \caption{Histogram showing the relationship between the heart rate and different temperature ranges. As can be seen, the higher the temperature, the lower is the heart rate on average. We can see also that the ranges 25-30$^\circ C$ and 30-35$^\circ C$ have similar averages, but the 25-30$^\circ C$ is much more spreadout.}
+            \label{fig:temp}
+            \end{center}
+        \end{figure}
+
+        
 \end{document}
