@@ -85,5 +85,20 @@
             \end{center}
         \end{figure}
 
+    In order to predict the time series now using these parameters as input as well, we will use a simple linear regression by Least Squares. In least mean squares, what we want is to minimize the function
+
+    $$|b-Ax|^2 = (b-Ax)^T(b-Ax) = x^TA^TAx -2b^TAx+b^Tb$$
+
+    where A is a matrix containing our samples, b is the desired outputs and x is the weights we want to calculate. Solving this, we get that
+
+    $$x^* = (A^TA)^{-1}A^Tb$$
+
+    This is the simpler version of the problem, but in many situations it is better to work with the regularized version of this process, in which we now try to minimize the function
+
+    $$|b-Ax|^2 + \phi(x)$$
+
+    where $\phi(x)$ is our regularization function that is there to make the model more resilient to noise. By adding this function on the weights we are calculating, we encourage our model to make many of the weights become 0, in turn making our final model more parcimonious. There are many regularizations possibilities, with some of the most common ones being $l1$ norm, $l2$ norm corresponding to lasso and ridge regression respectively.
+
+    
         
 \end{document}
