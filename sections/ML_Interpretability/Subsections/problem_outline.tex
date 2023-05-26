@@ -1,0 +1,17 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{../images/}}}
+\usepackage{subfiles}
+\usepackage{subfig}
+
+\begin{document}
+    \subsection{Problem Outline}
+        Deep learning models have demonstrated remarkable performance across various tasks, often surpassing traditional approaches. However, a lingering challenge associated with deep learning is the issue of interpretability \cite{doshivelez2017rigorous}. These models, characterized by their overparameterized nature and the involvement of hierarchical non-linearities, are often treated as black boxes. This lack of transparency poses significant concerns, particularly in critical applications such as diagnosing deadly diseases, autonomous driving, and financial systems. \par
+
+        To address this concern, numerous approaches have been proposed to enhance the interpretability of deep learning models. These methods can be broadly categorized into two interrelated goals: model interpretability and model interpretation. Model interpretability focuses on designing models that are inherently more understandable, emphasizing the extent to which a human can interpret the intrinsic properties of the model \cite{li2022interpretable}. A classic example of an interpretable model, although not within the deep learning context, is decision trees. The conditions at each node in a decision tree make it easy for humans to comprehend how the classification or regression output is derived. \par
+        
+        In contrast, traditional deep neural networks are considered to have low interpretability. Merely analyzing the weights and layers of the network provides limited to no information about how the classification is performed, leaving human observers in the dark about the decision-making process. \par
+        
+        The second goal, model interpretation, aims to explain the decision-making process of a model without directly relying on its parameters. This approach seeks to identify the significance of training samples in the inference process and determine the features that are most discriminative or relevant to the model's predictions \cite{ribeiro2016why}. \par
+        
+        By striving to achieve both model interpretability and model interpretation, researchers are dedicated to unraveling the inner workings of deep learning models. This pursuit not only enhances our trust in these models but also fosters their responsible deployment in critical domains where transparency and understanding are of paramount importance. \par
+\end{document}
